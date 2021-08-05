@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title>Noticias</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+	<!-- BARRA DE NAVEGACION -->
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				 <a class="navbar-brand" href="#">
+				 	<strong>MyLogo</strong>
+				 </a>
+				 
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+                <!-- ENLACES DEL MENU  -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{/views/clientes/index}">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="/views/clientes/">COMERCIO POLITICA</a></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" href="/views/clientes/libero/">LIBERO DEPORTES</a></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" href="/views/clientes/sbs/">SBS ECONOMIA Y FINANZAS</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+	<!-- CONTENIDO -->
+	<div class="container"></div>
+	<!-- PIE DE PAGINA -->
+	<footer th:fragment="footer" class="bg-dark text-center text-white fixed-bottom">
+
+		<div class="container">
+			<p>Noticias &copy;2021</p>
+		</div>
+
+
+
+		<script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+<title>Últimas noticias de Diario Comercio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container">
+		<h1 th:text=${titulo}></h1>
+	</div>
+
+	<div class="container">
+		<table class="table">
+			<thead class="table-dark">
+			<tr>
+				<th scope="col">Titular</th>
+				<th scope="col">Visítenos En</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:each="nt:${noticias}">
+				<td th:text="${nt.titulo}"></td>
+				<td th:text="${nt.informacion}"><p><a th:href="${nt.informacion}"></a></p></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!--  <footer th:replace="plantilla/template :: footer"></footer>-->
+
+</body>
+</html>
