@@ -1,4 +1,4 @@
-package com.pe.everis.entity;
+package com.pe.everis.model;
 
 import lombok.Getter;
 import lombok.Setter;

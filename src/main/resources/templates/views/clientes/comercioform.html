@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="container mt-S">
+		<div class="row justify-content-center">
+			<div class = "col-md-8">
+			<h4>Archivo de Noticias</h4>
+			<form th:action="@{/views/clientes/comercio}" th:object="${comercio}" method="get">
+			<input type="date" th:field="*{fecha}" class="form-control col-md-4">
+			<button type="submit" class ="btn btn-success mt-4 mb-4">Buscar</button>
+			</form>
+			
+			
+			<div class="container">
+				<table class="table">
+				<thead >
+					<tr>
+						<th>Titular</th>
+						<th>Visítenos En</th>
+					</tr>
+				</thead>
+				
+			<tbody>
+				<tr th:each="nt:${comercioPorFecha}">
+				<td th:text="${nt.titulo}"></td>
+				<td th:text="${nt.informacion}"><p><a th:href="${nt.informacion}"></a></p></td>
+			</tr>
+			</tbody>
+			</table>
+	</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<!--  <footer th:replace="plantilla/template :: footer"></footer>-->
+
+</body>
+</html>

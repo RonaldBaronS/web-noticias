@@ -1,13 +1,13 @@
-package com.pe.everis.entity;
+package com.pe.everis.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class LiberoDeporteResponse {
+public class SbsResponse {
     
     private String titulo;
     private String informacion;
-
+    
 }
