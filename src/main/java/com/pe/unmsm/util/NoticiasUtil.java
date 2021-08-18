@@ -1,4 +1,4 @@
-package com.pe.everis.util;
+package com.pe.unmsm.util;
 
 public class NoticiasUtil {
     // Mensajes de Validacion

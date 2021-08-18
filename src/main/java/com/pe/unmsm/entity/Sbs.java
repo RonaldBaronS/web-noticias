@@ -1,6 +1,4 @@
-package com.pe.everis.entity;
-
-import java.time.LocalDate;
+package com.pe.unmsm.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,23 +11,23 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="comercio")
+@Table(name="sbs")
 @Getter
 @Setter
-public class Comercio {
+public class Sbs {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private long id;
     
-    @Column(name="titulo")
+    @Column(name="titulo",length = 500)
     private String titulo;
     
-    @Column(name="informacion")
+    @Column(name="informacion",length = 500)
     private String informacion;
     
     @Column(name="fecha")
-    private LocalDate fecha;
-
+    private String fecha;
+    
 }

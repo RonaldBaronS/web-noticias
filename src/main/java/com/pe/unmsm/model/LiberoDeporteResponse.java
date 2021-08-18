@@ -1,4 +1,4 @@
-package com.pe.everis.model;
+package com.pe.unmsm.model;
 
 import lombok.Getter;
 import lombok.Setter;

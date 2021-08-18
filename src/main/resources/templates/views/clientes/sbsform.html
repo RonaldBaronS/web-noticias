@@ -18,14 +18,14 @@
 	<div class="container mt-S">
 		<div class="row justify-content-center">
 			<div class = "col-md-8">
-			<h4>Archivo de Noticias Diario El Comercio</h4>
-			<form th:action="@{/views/clientes/comercio}" th:object="${comercio}" method="get">
+			<h4>Archivo de Noticias SBS</h4>
+			<form th:action="@{/views/clientes/sbsEconomia}" th:object="${sbs}" method="get">
 			<input type="date" th:field="*{fecha}" class="form-control col-md-4">
 			<button type="submit" class ="btn btn-success mt-4 mb-4">Buscar</button>
+			</form>
 			<div class="container">
 		     	<a class="nav-link" href="/views/clientes/index">Ir a Inicio</a>
 		     </div>
-			</form>
 			
 			<div class="container">
 				<table class="table">
@@ -37,7 +37,7 @@
 				</thead>
 				
 			<tbody>
-				<tr th:each="nt:${comercioPorFecha}">
+				<tr th:each="nt:${sbsPorFecha}">
 				<td th:text="${nt.titulo}"></td>
 				<td th:text="${nt.informacion}"><p><a th:href="${nt.informacion}"></a></p></td>
 			</tr>

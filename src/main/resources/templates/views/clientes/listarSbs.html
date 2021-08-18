@@ -4,14 +4,29 @@
 <title>Últimas noticias de SBS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
+
+ <style>
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+    }
+  </style>
+<body background="/images/fondoBlanco.jpg">
 
 	<header th:replace="plantilla/template :: header"></header>
 
 	<div class="container">
 		<h1 th:text=${titulo}></h1>
 	</div>
-
+	
+	<div class="container">
+		<a class="nav-link" href="/views/clientes/sbsform">Ir Archivos</a>
+	</div>
+	<br></br>
 	<div class="container">
 		<table class="table">
 			<thead class="table-dark">

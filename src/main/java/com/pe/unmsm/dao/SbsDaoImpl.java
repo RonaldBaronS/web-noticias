@@ -1,8 +1,7 @@
-package com.pe.everis.dao;
+package com.pe.unmsm.dao;
 
-import com.pe.everis.entity.Comercio;
+import com.pe.unmsm.entity.Sbs;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
@@ -12,20 +11,20 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class ComercioDaoImpl implements ComercioDao {
+public class SbsDaoImpl implements SbsDao {
 
     @Autowired
-    private ComercioRepository repository;
+    private SbsRepository repository;
     
     @Override
-    public void save(Comercio entity) {
-        log.info("ComercioDaoImpl.save");
+    public void save(Sbs entity) {
+        log.info("SbsDaoImpl.save");
         repository.save(entity);
     }
     
     @Override
-    public void saveAll(List<Comercio> entities) {
-        log.info("ComercioDaoImpl.saveAll");
+    public void saveAll(List<Sbs> entities) {
+        log.info("SbsDaoImpl.saveAll");
         if(existeRegistro()) {
             repository.deleteAll();
             repository.saveAll(entities);
@@ -35,7 +34,7 @@ public class ComercioDaoImpl implements ComercioDao {
     }
     
     @Override
-    public List<Comercio> findByFecha(LocalDate fecha) {
+    public List<Sbs> findByFecha(String fecha) {
         return repository.findByFecha(fecha);
     }
     
@@ -46,5 +45,5 @@ public class ComercioDaoImpl implements ComercioDao {
             return true;
         }
     }
-    
+
 }

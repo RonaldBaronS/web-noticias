@@ -1,11 +1,11 @@
-package com.pe.everis.model;
+package com.pe.unmsm.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ComercioResponse {
+public class SbsResponse {
     
     private String titulo;
     private String informacion;
